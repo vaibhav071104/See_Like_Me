@@ -1,0 +1,80 @@
+/* V0.DEV Style Content Script CSS */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url(chrome-extension://__MSG_@@extension_id__/assets/fonts/OpenDyslexic.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.seelikeme-simulation-active {
+    transition: all 0.3s ease !important;
+}
+
+.seelikeme-dyslexia-font {
+    font-family: 'OpenDyslexic', 'Comic Sans MS', Arial, sans-serif !important;
+}
+
+.seelikeme-dyslexia-spacing {
+    letter-spacing: 0.12em !important;
+    word-spacing: 0.16em !important;
+    line-height: 1.8 !important;
+}
+
+.seelikeme-focus-indicator {
+    position: absolute !important;
+    pointer-events: none !important;
+    border: 3px solid #6366f1 !important;
+    border-radius: 8px !important;
+    background: rgba(99, 102, 241, 0.1) !important;
+    transition: all 0.2s ease !important;
+    z-index: 10000 !important;
+}
+
+.seelikeme-simulation-badge {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+    color: white !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    z-index: 10001 !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    cursor: pointer !important;
+    user-select: none !important;
+}
+
+.seelikeme-simulation-badge:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+@media (max-width: 768px) {
+    .seelikeme-simulation-badge {
+        top: 10px !important;
+        right: 10px !important;
+        padding: 6px 12px !important;
+        font-size: 11px !important;
+    }
+}
+
+@media print {
+    .seelikeme-simulation-badge,
+    .seelikeme-focus-indicator {
+        display: none !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .seelikeme-simulation-active,
+    .seelikeme-focus-indicator,
+    .seelikeme-simulation-badge {
+        animation: none !important;
+        transition: none !important;
+    }
+}
