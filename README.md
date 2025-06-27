@@ -130,7 +130,7 @@ text
 ### 🐍 Backend Setup
 
 1. **Clone the repository**:
-git clone https://github.com/yourusername/see-like-me-extension.git
+git clone https://github.com/vaibhav071104/See_Like_Me.git
 cd see-like-me-extension
 
 text
